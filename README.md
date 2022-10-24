@@ -266,3 +266,5 @@ Thanks again for your support, it is much appreciated! :pray:
 ## License
 
 MIT. See `LICENSE` for more details.
+
+Added nmbd to see netbios name 
