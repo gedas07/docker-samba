@@ -32,6 +32,7 @@ server role = standalone server
 server services = -dns, -nbt
 server signing = default
 server multi channel support = yes
+netbios name = Raspberry
 
 log level = ${SAMBA_LOG_LEVEL}
 ;log file = /usr/local/samba/var/log.%m
@@ -178,5 +179,6 @@ if [[ "$(yq --output-format=json e '(.. | select(tag == "!!str")) |= envsubst' /
 fi
 
 testparm -s
+nmbd -D
 
 exec "$@"
